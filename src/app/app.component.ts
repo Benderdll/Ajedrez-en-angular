@@ -36,9 +36,9 @@ export class AppComponent {
 
   whiteTurn: boolean = true;
 
-  toggleTurn() {
-    this.whiteTurn = !this.whiteTurn;
-  }
+  // toggleTurn() {
+  //   this.whiteTurn = !this.whiteTurn;
+  // }
 
   ngOnInit() {
     this.resetBoard();
