@@ -1,0 +1,23 @@
+<div class="content">
+  <div class="reset" (click)="resetBoard()">RESET</div>
+  <div class="table">
+    @for (row of board;track row; let rowIndex = $index) {
+    <div class="row">
+      @for (cell of row;track cell; let colIndex = $index) {
+      <div class="cell" [class.selected]="selectedCell === cell" [class.possible]="possibleMoves.includes(cell)"
+        [class.white]="(rowIndex + colIndex) % 2 === 0" [class.black]="(rowIndex + colIndex) % 2 !== 0"
+        (click)="selectCell(cell)">
+        {{ piecePositions[cell]}}
+        <div class="content">{{cell}}</div>
+      </div>
+      }
+    </div>
+    }
+
+  </div>
+  <div class="turn">
+    <div class="player" [class.activeForWhite]="whiteTurn">White</div>
+    <div class="player2" [class.activeForBlack]="!whiteTurn">Black</div>
+  </div>
+  <button (click)="toggleTurn()">Toggle Turn</button>
+</div>

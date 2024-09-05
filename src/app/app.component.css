@@ -1,0 +1,159 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height to center vertically */
+    background-color: #333;
+  }
+  
+  .reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    color: #ddd;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .reset:hover{
+    background-color: #ddddddc5;
+    color: #333;
+    transition: 0.3s;
+  }
+
+  .reset:active{
+    background-color: #e7d04e;
+    
+  }
+
+  .table {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 4 columns */
+
+    margin: 1rem;
+  }
+  
+  .row {
+    display: contents; /* Use contents to allow grid layout to work properly */
+  }
+  
+  .cell {
+    height: 50px;
+    width: 50px;
+    padding: 1.2rem; /* Padding inside each cell */
+    text-align: center; /* Center text inside each cell */
+    cursor: pointer; /* Pointer cursor to indicate clickable cells */
+    background-color: #333;
+    display: inline-block;
+    position: relative; /* Necesario para posicionar el contenido absoluto dentro de la celda */
+    color: #333;
+    font-size: 3rem;
+
+  }
+
+  .cell .content {
+    height: 0;
+    position: absolute;
+    bottom: 6px;
+    right: 1px;
+    font-size: 1rem; /* Adjust the font size as needed */
+    color: red;
+    background-color: transparent;
+    
+  }
+
+  .cell.white .content{
+    color: #b58863;
+  }
+
+  .cell.black .content{
+    color: #f0d9b5
+  }
+  .cell.white {
+    background-color: #f0d9b5;
+    border: 1px solid #f0d9b5;
+  }
+  
+  .cell.black {
+    background-color: #b58863;
+    border: 1px solid #b58863;
+  }
+
+  .cell:hover{
+    /* background-color: #ddddddc5; */
+    border: 1px solid #333;
+    transition: 0.3s;
+  }
+
+  .cell.selected {
+    background-color: #ddd; /* Highlight selected cell */
+    color: #333;
+  }
+  
+  .cell.possible {
+    background-color: rgb(33, 212, 108); /* Highlight possible moves */
+  }
+
+  .cell span{
+    font-size: 1.5rem;
+    color: cyan;
+  }
+
+  .pieces{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    color: #ddd;
+  }
+
+  .piece{
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0.5rem;
+  }
+
+  .piece:hover{
+    background-color: rgba(255, 255, 0, 0.596);
+    color: #333;
+    transition: 0.3s;
+  }
+
+  .piece.selected{
+    background-color: yellow;
+    color: #333;
+  }
+
+  
+  .player{
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0.5rem;
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .player2{
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0.5rem;
+    background-color: #333;
+    color: #ddd;
+  }
+  
+  .activeForWhite{
+    box-shadow: 0 0 10px 5px lightgreen;
+    color: #333;
+    transition: 0.3s
+  }
+
+  .activeForBlack{
+    box-shadow: 0 0 10px 5px lightgreen;
+    color: #ddd;
+    transition: 0.3s
+  }
